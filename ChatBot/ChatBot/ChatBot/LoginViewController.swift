@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        anonymousButton.layer.borderWidth = 2.0
+        anonymousButton.layer.borderWidth = 1.2
         anonymousButton.layer.borderColor = UIColor.white.cgColor
         
         
@@ -28,10 +28,28 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginAnonymouslyDidTapped(_ sender: AnyObject) {
         print("login anonymously did tapped")
+        /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
+        // 名前を指定して Storyboard を取得する(Main.storyboard の場合)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // From main storyboard instantiate a navigation controller
+        let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+        // Get the app delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // Set Navigation Controller as root view controller
+        appDelegate.window?.rootViewController = naviVC
     }
     
     @IBAction func googleLoginDidTapped(_ sender: AnyObject) {
         print("google login did tapped")
+        /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
+        // 名前を指定して Storyboard を取得する(Main.storyboard の場合)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // From main storyboard instantiate a navigation controller
+        let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+        // Get the app delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // Set Navigation Controller as root view controller
+        appDelegate.window?.rootViewController = naviVC
     }
 
     /*

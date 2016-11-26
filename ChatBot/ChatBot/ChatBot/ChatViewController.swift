@@ -21,6 +21,17 @@ class ChatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutDidTapped(_ sender: AnyObject) {
+        // 名前を指定して Storyboard を取得する(Main.storyboard の場合) nameのところにMain.storyboardのMainが入る
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // From main storyboard instantiate a navigation controller
+        // ここでのNavigationVCはStoryboard IDである
+        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        // Get the app delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // Set Navigation Controller as root view controller
+        appDelegate.window?.rootViewController = LoginVC
+    }
 
     /*
     // MARK: - Navigation
