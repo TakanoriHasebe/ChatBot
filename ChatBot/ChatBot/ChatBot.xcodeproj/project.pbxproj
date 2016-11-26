@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F3626EF71DE9A64B00E17344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3626EF61DE9A64B00E17344 /* AppDelegate.swift */; };
-		F3626EF91DE9A64B00E17344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3626EF81DE9A64B00E17344 /* ViewController.swift */; };
 		F3626EFC1DE9A64B00E17344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3626EFA1DE9A64B00E17344 /* Main.storyboard */; };
 		F3626EFE1DE9A64B00E17344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3626EFD1DE9A64B00E17344 /* Assets.xcassets */; };
 		F3626F011DE9A64B00E17344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3626EFF1DE9A64B00E17344 /* LaunchScreen.storyboard */; };
@@ -25,12 +24,13 @@
 		F3626F211DE9A67500E17344 /* OrLine.png in Resources */ = {isa = PBXBuildFile; fileRef = F3626F141DE9A67500E17344 /* OrLine.png */; };
 		F3626F221DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3626F151DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg */; };
 		F3626F231DE9A67500E17344 /* profileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F3626F161DE9A67500E17344 /* profileImage.png */; };
+		F3C2363F1DE9AD3A00D20E33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2363E1DE9AD3A00D20E33 /* LoginViewController.swift */; };
+		F3C236411DE9AD6400D20E33 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C236401DE9AD6400D20E33 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3626EF31DE9A64B00E17344 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3626EF61DE9A64B00E17344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3626EF81DE9A64B00E17344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3626EFB1DE9A64B00E17344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3626EFD1DE9A64B00E17344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3626F001DE9A64B00E17344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		F3626F141DE9A67500E17344 /* OrLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrLine.png; sourceTree = "<group>"; };
 		F3626F151DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg"; sourceTree = "<group>"; };
 		F3626F161DE9A67500E17344 /* profileImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileImage.png; sourceTree = "<group>"; };
+		F3C2363E1DE9AD3A00D20E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3C236401DE9AD6400D20E33 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				F3626EF61DE9A64B00E17344 /* AppDelegate.swift */,
-				F3626EF81DE9A64B00E17344 /* ViewController.swift */,
+				F3C2363E1DE9AD3A00D20E33 /* LoginViewController.swift */,
+				F3C236401DE9AD6400D20E33 /* ChatViewController.swift */,
 				F3626EFA1DE9A64B00E17344 /* Main.storyboard */,
 				F3626F081DE9A67500E17344 /* ChatBotResources */,
 				F3626EFD1DE9A64B00E17344 /* Assets.xcassets */,
@@ -204,7 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3626EF91DE9A64B00E17344 /* ViewController.swift in Sources */,
+				F3C2363F1DE9AD3A00D20E33 /* LoginViewController.swift in Sources */,
+				F3C236411DE9AD6400D20E33 /* ChatViewController.swift in Sources */,
 				F3626EF71DE9A64B00E17344 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +369,7 @@
 				F3626F071DE9A64B00E17344 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
