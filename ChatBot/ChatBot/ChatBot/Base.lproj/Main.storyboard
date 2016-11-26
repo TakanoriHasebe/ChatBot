@@ -21,20 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-Bw-im3">
-                                <rect key="frame" x="93" y="234" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-qD-3dQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-Bw-im3">
+                                <rect key="frame" x="16" y="237" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="5jO-BQ-Xwx"/>
+                                    <constraint firstAttribute="height" constant="40" id="Q8K-qx-Fji"/>
+                                </constraints>
                                 <state key="normal" title="Login Anonymously">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="LoginAnonymouslyDidTapped:" destination="uCh-6h-O0X" eventType="touchUpInside" id="E4N-iE-Go0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krX-jS-cDV">
-                                <rect key="frame" x="118" y="315" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="google login">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="OrLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-zy-Dle">
+                                <rect key="frame" x="17" y="285" width="287" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="9JM-uO-GY4"/>
+                                    <constraint firstAttribute="height" constant="16" id="DAe-Og-TSO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krX-jS-cDV">
+                                <rect key="frame" x="140" y="327" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BfO-PW-nOM"/>
+                                    <constraint firstAttribute="width" constant="40" id="CWP-bH-Oqg"/>
+                                </constraints>
+                                <state key="normal" image="googleButton.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -43,11 +59,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wJW-L6-MDX" firstAttribute="top" secondItem="krX-jS-cDV" secondAttribute="bottom" constant="177" id="A7Z-WF-SL4"/>
+                            <constraint firstItem="krX-jS-cDV" firstAttribute="top" secondItem="q7W-zy-Dle" secondAttribute="bottom" constant="36" id="BXa-gq-VcY"/>
+                            <constraint firstItem="q7W-zy-Dle" firstAttribute="centerX" secondItem="oav-UC-VYx" secondAttribute="centerX" id="F89-dk-zJR"/>
+                            <constraint firstItem="wJW-L6-MDX" firstAttribute="top" secondItem="xwC-qD-3dQ" secondAttribute="bottom" id="PhS-qx-zLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="xwC-qD-3dQ" secondAttribute="trailing" id="Tt6-tm-HpW"/>
+                            <constraint firstItem="krX-jS-cDV" firstAttribute="centerX" secondItem="oav-UC-VYx" secondAttribute="centerX" id="Zcs-bU-uif"/>
+                            <constraint firstItem="xwC-qD-3dQ" firstAttribute="leading" secondItem="oav-UC-VYx" secondAttribute="leading" id="dFX-9P-sWb"/>
+                            <constraint firstItem="xwC-qD-3dQ" firstAttribute="top" secondItem="oav-UC-VYx" secondAttribute="top" id="eq2-Or-wt2"/>
+                            <constraint firstItem="lK7-Bw-im3" firstAttribute="centerX" secondItem="oav-UC-VYx" secondAttribute="centerX" id="xYb-IS-5Xt"/>
+                            <constraint firstItem="q7W-zy-Dle" firstAttribute="top" secondItem="lK7-Bw-im3" secondAttribute="bottom" constant="36" id="xzq-DJ-Dns"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anonymousButton" destination="lK7-Bw-im3" id="2Uu-4D-vmU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LE5-zh-eeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="115"/>
+            <point key="canvasLocation" x="-523.125" y="114.08450704225352"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="hIW-fq-0ZL">
@@ -68,4 +99,9 @@
             <point key="canvasLocation" x="289" y="114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OrLine.png" width="864" height="45"/>
+        <image name="googleButton.png" width="120" height="120"/>
+        <image name="papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg" width="750" height="1334"/>
+    </resources>
 </document>
