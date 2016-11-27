@@ -1,0 +1,5 @@
+-Firebaseに追加したもの
+Core
+Auth
+Database
+Storage
