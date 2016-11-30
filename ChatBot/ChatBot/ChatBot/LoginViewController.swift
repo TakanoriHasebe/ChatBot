@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth /* login機能の追加 */
 
 class LoginViewController: UIViewController {
 
@@ -31,24 +30,8 @@ class LoginViewController: UIViewController {
         print("login anonymously did tapped")
         /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
         // 名前を指定して Storyboard を取得する(Main.storyboard の場合)
+        Helper.helper.LoginAnonymously()
         
-        FIRAuth.auth()?.signInAnonymously() { (user, error) in
-            if error == nil{ /* errorでなかったとき */
-                //print("Not error")
-                print("UserId: \(user!.uid)")
-            }else{ /* errorが生じたとき */
-                //print("Error")
-                print(error!.localizedDescription)
-                return
-            }
-        }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // From main storyboard instantiate a navigation controller
-        let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
-        // Get the app delegate
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        // Set Navigation Controller as root view controller
-        appDelegate.window?.rootViewController = naviVC
     }
     
     @IBAction func googleLoginDidTapped(_ sender: AnyObject) {

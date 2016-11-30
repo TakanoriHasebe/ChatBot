@@ -25,6 +25,7 @@
 		F3626F211DE9A67500E17344 /* OrLine.png in Resources */ = {isa = PBXBuildFile; fileRef = F3626F141DE9A67500E17344 /* OrLine.png */; };
 		F3626F221DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3626F151DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg */; };
 		F3626F231DE9A67500E17344 /* profileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F3626F161DE9A67500E17344 /* profileImage.png */; };
+		F38A419B1DEF01A300A93AD5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A419A1DEF01A300A93AD5 /* Helper.swift */; };
 		F3C2363F1DE9AD3A00D20E33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2363E1DE9AD3A00D20E33 /* LoginViewController.swift */; };
 		F3C236411DE9AD6400D20E33 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C236401DE9AD6400D20E33 /* ChatViewController.swift */; };
 		F3D856371DEA70370097118E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3D856361DEA70370097118E /* GoogleService-Info.plist */; };
@@ -53,6 +54,7 @@
 		F3626F141DE9A67500E17344 /* OrLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrLine.png; sourceTree = "<group>"; };
 		F3626F151DE9A67500E17344 /* papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "papers.co-sj99-blue-purple-gradation-blur-33-iphone6-wallpaper.jpg"; sourceTree = "<group>"; };
 		F3626F161DE9A67500E17344 /* profileImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileImage.png; sourceTree = "<group>"; };
+		F38A419A1DEF01A300A93AD5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F3C2363E1DE9AD3A00D20E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3C236401DE9AD6400D20E33 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F3D856361DEA70370097118E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F3C8D67C1DEA7BE60025D213 /* View */,
 				F3C8D67B1DEA7BDD0025D213 /* Model */,
 				F3626EF61DE9A64B00E17344 /* AppDelegate.swift */,
+				F38A419A1DEF01A300A93AD5 /* Helper.swift */,
 				F3626EFA1DE9A64B00E17344 /* Main.storyboard */,
 				F3626F081DE9A67500E17344 /* ChatBotResources */,
 				F3626EFD1DE9A64B00E17344 /* Assets.xcassets */,
@@ -313,6 +316,7 @@
 				F3C2363F1DE9AD3A00D20E33 /* LoginViewController.swift in Sources */,
 				F3C236411DE9AD6400D20E33 /* ChatViewController.swift in Sources */,
 				F3626EF71DE9A64B00E17344 /* AppDelegate.swift in Sources */,
+				F38A419B1DEF01A300A93AD5 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
