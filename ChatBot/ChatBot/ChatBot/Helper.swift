@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseAuth
 import UIKit
-
+import GoogleSignIn
 
 class Helper{
     static let helper = Helper()
@@ -22,14 +22,8 @@ class Helper{
         FIRAuth.auth()?.signInAnonymously() { (user, error) in
             if error == nil{ /* errorでなかったとき */
                 print("UserId: \(user!.uid)")
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                // From main storyboard instantiate a navigation controller
-                let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
-                // Get the app delegate
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                // Set Navigation Controller as root view controller
-                appDelegate.window?.rootViewController = naviVC
                 
+                self.switchToNavigationViewController()
             }else{ /* errorが生じたとき */
                 print("Error")
                 print(error!.localizedDescription)
@@ -39,6 +33,35 @@ class Helper{
         
     }
 
+    func logInWithGoogle(authentication: GIDAuthentication){
+        
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if error != nil{ /* errorであったとき */
+                print(error!.localizedDescription)
+                return
+            }else{
+                print(user?.email)
+                print(user?.displayName)
+                
+                self.switchToNavigationViewController()
+            }
+        }
+    }
+    
+    private func switchToNavigationViewController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // From main storyboard instantiate a navigation controller
+        let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+        // Get the app delegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // Set Navigation Controller as root view controller
+        appDelegate.window?.rootViewController = naviVC
+
+        
+    }
+    
     
 }
 

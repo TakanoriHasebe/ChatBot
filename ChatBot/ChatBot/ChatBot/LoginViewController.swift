@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
     @IBOutlet weak var anonymousButton: UIButton!
     override func viewDidLoad() {
@@ -17,7 +18,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         anonymousButton.layer.borderWidth = 1.2
         anonymousButton.layer.borderColor = UIColor.white.cgColor
-        
+        GIDSignIn.sharedInstance().clientID = "910080858401-gnmi65bfn882dohov4smpopv3uvf2cp2.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
         
     }
 
@@ -36,6 +39,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func googleLoginDidTapped(_ sender: AnyObject) {
         print("google login did tapped")
+        GIDSignIn.sharedInstance().signIn()
+        
+        /*
         /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
         // 名前を指定して Storyboard を取得する(Main.storyboard の場合)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -44,9 +50,18 @@ class LoginViewController: UIViewController {
         // Get the app delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         // Set Navigation Controller as root view controller
-        appDelegate.window?.rootViewController = naviVC
+        appDelegate.window?.rootViewController = naviVC*/
     }
 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil{
+            print(error!.localizedDescription)
+        }
+        print(user.authentication)
+        Helper.helper.logInWithGoogle(authentication: user.authentication)
+
+    }
+    
     /*
     // MARK: - Navigation
 

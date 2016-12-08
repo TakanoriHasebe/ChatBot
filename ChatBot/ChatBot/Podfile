@@ -10,5 +10,6 @@ target 'ChatBot' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'GoogleSignIn' #Google SignInを用いる
 
 end
