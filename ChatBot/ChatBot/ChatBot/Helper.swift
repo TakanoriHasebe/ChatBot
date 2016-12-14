@@ -35,6 +35,7 @@ class Helper{
 
     func logInWithGoogle(authentication: GIDAuthentication){
         
+        print("logInWithGoogle")
         let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in

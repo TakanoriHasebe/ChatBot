@@ -54,6 +54,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("sign is tapped")
         if error != nil{
             print(error!.localizedDescription)
         }
