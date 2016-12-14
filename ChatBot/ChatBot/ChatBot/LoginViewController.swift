@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import GoogleSignIn
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
@@ -33,13 +34,33 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         print("login anonymously did tapped")
         /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
         // 名前を指定して Storyboard を取得する(Main.storyboard の場合)
-        Helper.helper.LoginAnonymously()
+        //Helper.helper.LoginAnonymously()
+        
+        FIRAuth.auth()?.signInAnonymously() { (user, error) in
+            if error == nil{ /* errorでなかったとき */
+                print("UserId: \(user!.uid)")
+                
+                
+                 let select = self.storyboard!.instantiateViewController(withIdentifier: "select")
+                 self.present(select, animated: false, completion: nil)
+                //self.switchToNavigationViewController()
+            }else{ /* errorが生じたとき */
+                print("Error")
+                print(error!.localizedDescription)
+                return
+            }
+        }
+
+        
+        //let next = storyboard!.instantiateViewController(withIdentifier: "next")
+        //self.present(next,animated: false, completion: nil)
         
     }
     
     @IBAction func googleLoginDidTapped(_ sender: AnyObject) {
         print("google login did tapped")
         GIDSignIn.sharedInstance().signIn()
+        
         
         /*
         /* 以下のコードを画面遷移したいところ（ボタンなど）に加える */
@@ -59,6 +80,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         }
         print(user.authentication)
         Helper.helper.logInWithGoogle(authentication: user.authentication)
+        //authentication: user.authentication
 
     }
     

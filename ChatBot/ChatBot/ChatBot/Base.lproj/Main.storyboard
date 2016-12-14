@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uCh-6h-O0X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uCh-6h-O0X">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,12 +78,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LE5-zh-eeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523.125" y="114.08450704225352"/>
+            <point key="canvasLocation" x="-503" y="113"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="qg1-k6-zeN">
+            <objects>
+                <viewController storyboardIdentifier="select" id="VBZ-fk-K2e" customClass="SelectViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ru4-QY-AFf"/>
+                        <viewControllerLayoutGuide type="bottom" id="2pl-B1-Lgg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aFB-zY-Vh5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5k7-J4-9Al" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="112"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="hIW-fq-0ZL">
             <objects>
-                <viewController id="Qi1-aA-iNT" customClass="ChatViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" id="Qi1-aA-iNT" customClass="ChatViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LFH-UK-b7Y"/>
                         <viewControllerLayoutGuide type="bottom" id="0hb-0E-6MX"/>
@@ -104,26 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpE-UL-kKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286.25" y="113.02816901408451"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="D1C-zn-NSy">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="CNl-t7-JCe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="K01-Y5-Ejl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.085678679023692778" green="0.24963107638888893" blue="0.54558983098447711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Qi1-aA-iNT" kind="relationship" relationship="rootViewController" id="e2S-up-ysO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eoz-6c-pWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="288.75" y="113.02816901408451"/>
+            <point key="canvasLocation" x="1014" y="112"/>
         </scene>
     </scenes>
     <resources>

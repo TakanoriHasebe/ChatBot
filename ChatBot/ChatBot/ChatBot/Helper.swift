@@ -23,7 +23,10 @@ class Helper{
             if error == nil{ /* errorでなかったとき */
                 print("UserId: \(user!.uid)")
                 
-                self.switchToNavigationViewController()
+                /*
+                let next = storyboard!.instantiateViewController(withIdentifier: "next")
+                self.present(next,animated: false, completion: nil)*/
+                //self.switchToNavigationViewController()
             }else{ /* errorが生じたとき */
                 print("Error")
                 print(error!.localizedDescription)
@@ -45,7 +48,8 @@ class Helper{
                 print(user?.email)
                 print(user?.displayName)
                 
-                self.switchToNavigationViewController()
+                
+                //self.switchToNavigationViewController()
             }
         }
     }
