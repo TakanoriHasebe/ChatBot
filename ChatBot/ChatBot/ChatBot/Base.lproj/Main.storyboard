@@ -55,6 +55,7 @@
                                 </state>
                                 <connections>
                                     <action selector="googleLoginDidTapped:" destination="uCh-6h-O0X" eventType="touchUpInside" id="gXs-Ps-FmK"/>
+                                    <segue destination="VBZ-fk-K2e" kind="show" animates="NO" id="QnD-iH-Xag"/>
                                 </connections>
                             </button>
                         </subviews>
